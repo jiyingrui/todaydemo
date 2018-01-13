@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>纪璎芮版权所有</title>
+		<link rel="stylesheet" href="../css/us.css" />
+	</head>
+
+	<body>
+		<div class="box">
+			<header>
+				<h3 class="uname">聊天头部</h3></header>
+			<div>
+
+				<section>
+					<div class="box2">显示聊天信息</div>
+					<div class="myform">
+						<textarea name="msg" rows="5" cols=""></textarea>
+
+						<button type="button" class="close">关闭</button>
+						<button type="button" class="send">发送</button>
+					</div>
+				</section>
+				<aside>
+					<ul class="user">
+						<li>张</li>
+						<li>李</li>
+						<li>王</li>
+						<li>赵</li>
+						<li>韩</li>
+					</ul>
+				</aside>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script>
+			//跟随鼠标的移动
+			var zindex = 1;
+			$("header").mousedown(function(ev) {
+				var parent = $(this).parent();
+
+				var fx = ev.clientX - parent.position().left;
+				var sy = ev.clientY - parent.position().top; //区分点击事件
+				$(document).mousemove(function(evt) { //evt代表鼠标相关事件，只有事件函数需要ev
+					var x = evt.clientX - fx;
+					var y = evt.clientY - sy;
+
+					parent.css({
+						left: x,
+						top: y
+					});
+				})
+			})
+			$(document).mouseup(function() {
+				$(document).off("mousemove");
+			})
+			/*事件委托，来克隆*/
+			$(".user").click(function(ev) {
+				//			
+				ev.stopPropagation();
+				var boxt = $(this).parents(".box").clone(true);
+				boxt.find(".uname").html(ev.target.innerText);
+				boxt.css({
+					left: 50,
+					top: 100,
+					zIndex: ++zindex
+				})
+				boxt.appendTo("body");
+
+			})
+			// 单击哪个哪个在最前面
+			$(".box").click(function() {
+				$(this).css("zIndex", ++zindex);
+			})
+			//关闭当前窗口
+			$('[class = "close"]').click(function() { //属性符选择器
+				$(this).parents(".box").fadeOut();
+			})
+		</script>
+	</body>
+
+</html>

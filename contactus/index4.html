@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>联系我们</title>
+		<script src="new1_file.js"></script>
+			<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#all{
+			width: 1200px;
+			
+			left:50%;
+			margin-left: -600px;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			color: #f6f7e4;
+			text-decoration: none;
+		}
+		li{
+			float:left;
+			text-align:center;
+			margin: 20px;
+		}
+		#top{
+			background: #7fa3aa;
+			color: #f6f7e4;
+			width: 1200px;
+			position: absolute;
+			left:50%;
+			margin-left: -600px;
+		}
+		#center{
+			position: absolute;
+			margin-top: 60px;
+			width: 1200px;
+			left:50%;
+			margin-left: -600px;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="top">
+				<ul>
+					<li><a href="../index.html">首页</a></li>	
+					<li><a href="../booklink/index1.html">书吧链接</a></li>	
+					<li><a href="../bookstyle/index2.html">书吧风采</a></li>	
+					<li><a href="../activity/index3.html">活动介绍</a></li>	
+				</ul>
+			</div>
+			<div id="center">
+				<table>
+				<td height="60"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="120" height="30" align="center" class=title>用户帐号</td>
+        <td width="10">&nbsp;</td>
+        <td><input name="userName" type="text" class=xpInput id="userName2" onFocus="javascript:selectTxt(this);" size="50" maxlength="16"></td>
+        <td width="200"> *
+
+4-16位（包括4、16）</td>
+      </tr>
+	  <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+      <tr>
+        <td height="30" align="center" class=title>电子邮件</td>
+        <td width="10">&nbsp;</td>
+        <td><input name="email" type="text" class=xpInput id="email" onFocus="javascript:selectTxt(this);" size="50" maxlength="50"></td>
+        <td width="200">* 必选</td>
+      </tr>
+	  <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+	   <tr>
+        <td width="120" height="30" align="center" class=title>权限级别</td>
+        <td>&nbsp;</td>
+        <td width="350"><select name="userType" size="1" id="select" style="width:300px;">
+          <option selected>普通会员</option>
+          <option>VIP会员</option>
+          <option>管理员</option>
+          <option>超级管理员</option>
+        </select></td>
+        <td> * 必选</td>
+      </tr>
+	  <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+      <tr>
+        <td height="30" align="center" class=title>用户口令</td>
+        <td>&nbsp;</td>
+        <td><input name="newPswd" type="password" class=xpInput id="newPswd2" onFocus="javascript:selectTxt(this);" size="50" maxlength="16"></td>
+        <td> * 4-16位（包括4、16）</td>
+      </tr>
+	  <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+      <tr>
+        <td height="30" align="center" class=title>确认口令</td>
+        <td>&nbsp;</td>
+        <td><input name="rePswd" type="password" class=xpInput id="rePswd2" onFocus="javascript:selectTxt(this);" size="50" maxlength="16"></td>
+        <td> * 4-16位（包括4、16）</td>
+      </tr>
+	  <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+      <tr>
+        <td height="30" align="center" class=title>真实姓名</td>
+        <td>&nbsp;</td>
+        <td><input name="realName" type="text" class=xpInput id="realName2" onFocus="javascript:selectTxt(this);" size="50" maxlength="50"></td>
+        <td> * 必填</td>
+      </tr>
+	  <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+      <tr>
+        <td height="30" align="center" class=title>用户性别</td>
+        <td>         </td>
+        <td><input type="radio" name="sexy" id="radio" value="男" checked>
+          <label for="radio">男</label>
+          <input type="radio" name="sexy" id="radio2"  value="女">
+          <label for="radio2">女</label></td>
+        <td> * 必选</td>
+      </tr>
+	  <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+      <tr>
+        <td height="30" align="center" class=title>个人爱好</td>
+        <td>&nbsp;</td>
+        <td><input name="fond1" type="checkbox" id="fond1" value="电脑">
+ <label for="fond1">电脑</label>
+  <input name="fond2" type="checkbox" id="fond2" value="唱歌">
+<label for="fond2">唱歌</label>
+<input name="fond3" type="checkbox" id="fond3" value="篮球">
+<label for="fond3">篮球</label>
+<input name="fond4" type="checkbox" id="fond4" value="舞蹈">
+<label for="fond4">舞蹈</label>
+<input name="fond5" type="checkbox" id="fond5" value="足球">
+<label for="fond5">足球</label></td>
+        <td> * 可多选</td>
+      </tr>
+	   <tr><td height=1 colspan="4"  background="images/dot.gif"></td>
+	  </tr>
+      <tr>
+        <td height="110" align="center" class=title>其他情况</td>
+        <td>&nbsp;</td>
+        <td colspan="2"><textarea name="memo" cols="90" rows="6" id="memo" class=memoInput>无</textarea></td>
+        </tr>
+	  
+    </table></td>
+  </tr>
+  
+  <tr>
+    <td height="5"></td>
+  </tr>
+ <tr>
+    <td height="2" bgcolor="#ECEAEB"></td>
+  </tr>
+
+</table>
+<table width="780"  border="0" align="center" cellpadding="0" cellspacing="0" class=borderTable>
+  <tr>
+    <td width="20">&nbsp;</td>
+    <td height="80" align="center"><table  border="0" cellspacing="20" cellpadding="0">
+      <tr>
+        <td><input type="button" name="Submit" value="提交" class=xpBtn onClick="javascript:dataSubmit();"></td>
+      </tr>
+    </td>
+    <td width="20">&nbsp;</td>
+  </tr>
+</table>
+</table>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			ul li {
+				line-height: 2em;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			ul li:nth-of-type(odd) {
+				background: #80c9f9;
+			}
+			
+			.box {
+				width: 610px;
+				height: 490px;
+				border: 1px solid #b1b2b2;
+				border-radius: 3px;
+				margin: 10px;
+				position: absolute;
+				background: white;
+			}
+			
+			.box header {
+				height: 77px;
+				background: #f8fbfe;
+				border-bottom: 1px solid #e9ebeb;
+			}
+			header{
+				cursor: move;//可拖拽;
+			}
+			
+			h3 {
+				padding: 1em;
+			}
+			
+			aside {
+				background: #f6f6f6;
+				width: 153px;
+				top: 77px;
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
+				border-left: 1px solid #e8eaea;
+			}
+			
+			.myform {
+				height: 130px;
+				left: 0px;
+				position: absolute;
+				right: 154px;
+				bottom: 0px;
+				border-top: 1px solid #eaebeb;
+			}
+			
+			textarea {
+				height: 100px;
+				width: 99%;
+				border: none;
+				outline: none;
+				resize: none;
+			}
+			
+			button {
+				width: 70px;
+				height: 24px;
+				background: #5fb8f2;
+				float: right;
+				border: none;
+				margin: 0px 5px;
+				border-radius: 5px;
+				color: #fff;
+			}
+			.box2{
+				padding: 10px;
+				color: #666;	
+				background: #8DEEEE;
+				height: 260px;
+			}
